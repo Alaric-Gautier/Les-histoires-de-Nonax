@@ -1,0 +1,44 @@
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    height: 4rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 10);
+}
+
+.nav ul {
+    display: flex;
+    flex-direction: row;
+    padding: 0.5rem 1rem;
+    list-style: none;
+}
+
+.nav ul li {
+    margin: 0 1rem;
+    padding: 0.5rem 1rem;
+    transition: transform 1s;
+    border: 1.5px solid #fff;
+    border-radius: 20px;
+    color: rgb(231, 223, 223);
+    text-shadow: rgb(160, 239, 239) 0 0 10px;
+    font-size: 1.1rem;
+    font-weight: bolder;
+}
+
+.nav ul li:hover{
+    transform: scale(1.2);
+    transition: transform 1s;
+}
+
+.logoNavbar {
+    position: relative;
+    transition: transform 1s;
+}
+
+.logoNavbar:hover {
+    transform: scale(1.2);
+    transition: transform 1s;
+}
+  
