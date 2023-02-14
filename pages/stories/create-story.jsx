@@ -5,6 +5,7 @@ import { useState } from "react";
 import Header from "../../src/components/Header";
 import styles from "../../styles/Home.module.css";
 
+
 export default function CreateStory() {
 
   const [story, setStory] = useState("");
@@ -46,7 +47,7 @@ export default function CreateStory() {
 
     // afficher un élément indiquant que l'histoire est en cours d'écriture après le submit
     const loading = document.querySelector(".loading");
-    loading.innerHTML = "Chargement de l'histoire...";
+    loading.innerHTML = "L'histoire est en cours d'écriture...";
     loading.style.color = "white";
 
     try {
@@ -54,7 +55,12 @@ export default function CreateStory() {
       const dataResponse = await response.json();
       const story = dataResponse.choices[0].text;
 
-      //TODO enregsitrer l'histoire reçue dans un fichier JSON.
+      //TODO enregsitrer l'histoire reçue dans un fichier JSON et par la suite dans une base de données
+      // fs.writeFile("story.json", story, (err) => {
+      //   if (err) {
+      //     console.log(err);
+      //   }
+      // });
       
       setStory(story);
     } 
