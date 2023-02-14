@@ -15,6 +15,7 @@ jobs:
       - name: List files in the repository
         run: |
           npm i
+          npx playwright install
           npm run test
       - run: echo "🍏 This job's status is ${{ job.status }}."
       - run: echo "🎉 The published version is ${{ github.event.release.tag_name }}."
