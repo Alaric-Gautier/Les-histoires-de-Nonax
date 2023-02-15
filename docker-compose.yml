@@ -1,0 +1,6 @@
+version: '3.9'
+services:
+  next:
+    image: alaricg/les_histoires_de_nonax:lhdn
+    ports:
+      - "3000:3000"
