@@ -1,0 +1,26 @@
+# Configuration for Dependabot
+version: 2
+updates:
+  # Enable version updates for npm
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+name: Dependabot
+on:
+  # Déclencher Dependabot chaque fois qu'un événement push se produit
+  push:
+    branches:
+      - test-dependabot
+jobs:
+  dependabot:
+    runs-on: ubuntu-latest
+    steps:
+      # Vérifier les mises à jour des dépendances en utilisant Dependabot
+      - name: Dependabot
+        uses: dependabot/dependabot-core@v0.170.x
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          directory: "/"
+          update: "widen"
+          package-ecosystem: "npm"
