@@ -11,7 +11,7 @@ on:
   # Déclencher Dependabot chaque fois qu'un événement push se produit
   push:
     branches:
-      - test-dependabot
+      - main
 jobs:
   dependabot:
     runs-on: ubuntu-latest
