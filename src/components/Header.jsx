@@ -23,7 +23,7 @@ export default function Header() {
                     <Link href="/stories/create-story">Créer une histoire</Link>
                 </li>
                 <li>
-                    <Link href="/Toutes les histoires de Nonax !">
+                    <Link href="/stories/all-stories">
                         Toutes les histoires de Nonax !
                     </Link>
                 </li>
